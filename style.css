@@ -1,0 +1,148 @@
+:root {
+    --background-color: hsl(47, 88%, 63%);
+    --shadow-color: hsl(0, 0%, 7%)
+    --font-color: hsl(0, 0%, 42%);
+
+    --default-padding-large: 24px;
+    --default-padding-medium: 12px;
+    --default-padding-small: 10px;
+
+    --default-line-height: 150%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-color);
+}
+.card {
+    background-color: hsl(0, 0%, 100%);
+    padding: var(--default-padding-large);
+    border-radius: 20px;
+    outline: solid var(--shadow-color) 1px;
+    
+    font-family: Figtree;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--default-padding-large);
+
+    box-shadow: 8px 8px 0 0;
+
+    
+    width: 100%;
+    max-width: 384px;
+    height: auto;
+}
+.card-image {
+    border-radius: var(--default-padding-small);
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+
+    display: block;
+}
+
+.card-text {
+    gap: var(--default-padding-medium);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.card-progress,
+.card-timestamp {
+    align-self: flex-start;
+
+    font-size: 14px;
+    line-height: var(--default-line-height);
+    color: var(--shadow-color);
+    letter-spacing: 0;
+}
+
+.card-progress {
+    background-color: var(--background-color);
+    border-radius: 4px;
+    padding: 4px 12px;
+    
+    font-weight: bold;
+}
+
+.card-title {
+    font-weight: 800;
+    font-size: 24px;
+    line-height: var(--default-line-height);
+}
+.card-title:hover {
+    cursor: pointer;
+    color: var(--background-color);
+}
+
+.card-subtext {
+    color: var(--font-color);
+    line-height: var(--default-line-height);
+    font-size: 16px;
+}
+
+.author-info {
+    align-self: self-start;
+
+    width: 129px;
+    height: 32px;
+
+    display: flex;
+    align-items: center;
+    gap: var(--default-padding-medium);
+
+    font-size: 14px;
+    font-weight: 800;
+
+}
+.author-info > img {
+    height: 32px;
+    width: 32px;
+}
+
+.attribution { 
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 11px;
+    padding: 8px 0;
+    background: transparent;
+    pointer-events: none;
+}
+    
+.attribution a { 
+    pointer-events: auto;
+    color: hsl(228, 45%, 44%); 
+}
+
+@media screen and (max-width: 390px) {
+    .card {
+        width: 327px;
+    }
+}
+
+@media screen and (max-width: 345px) {
+    .card {
+        width: 300px;
+    }
+    .card-title {
+        font-size: 20px;
+    }
+    .card-subtext {
+        font-size: 14px;
+    }
+}

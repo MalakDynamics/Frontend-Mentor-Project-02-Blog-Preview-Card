@@ -1,6 +1,6 @@
 :root {
     --background-color: hsl(47, 88%, 63%);
-    --shadow-color: hsl(0, 0%, 7%)
+    --shadow-color: hsl(0, 0%, 7%);
     --font-color: hsl(0, 0%, 42%);
 
     --default-padding-large: 24px;
